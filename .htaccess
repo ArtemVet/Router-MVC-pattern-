@@ -1,0 +1,9 @@
+<IfModule mod_headers.c>
+	RewriteEngine On
+	RewriteBase /
+	RewriteCond %{SCRIPT_FILENAME} !-d
+	RewriteCond %{SCRIPT_FILENAME} !-f
+	RewriteRule ^(.*)$ /public/index.php
+</IfModule>
+
+DirectoryIndex public/index.php
